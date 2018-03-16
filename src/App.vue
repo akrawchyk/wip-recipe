@@ -1,20 +1,37 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link>
+      <!-- <router&#45;link to="/about">About</router&#45;link> -->
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+}
+
+@media screen and (min-width: 60em) {
+  #app {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 #nav {
