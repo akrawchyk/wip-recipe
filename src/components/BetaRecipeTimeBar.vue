@@ -1,5 +1,5 @@
 <template>
-  <div class="BetaRecipeTimeBar">
+  <div class="BetaRecipeTimeBar" aria-hidden>
     <div v-for="(step, idx) in steps" :key="idx" :class="step.type">
       &nbsp;
     </div>
@@ -19,7 +19,7 @@ export default {
 .BetaRecipeTimeBar {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .BetaRecipeTimeBar > div {

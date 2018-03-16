@@ -26,7 +26,7 @@
     <h2>Steps</h2>
     <ol class="recipeInstructions" itemprop="recipeInstructions">
       <li v-for="(step, sidx) in recipe.steps" :key="sidx" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <RecipeStep :step="step" />
+        <RecipeStep :step="step" :steps="recipe.steps" :stepIdx="sidx" :totalTime="totalTime" />
       </li>
     </ol>
   </div>
@@ -109,15 +109,6 @@ export default {
         .map(this.momentDuration)
         .reduce(this.sumMomentDurations, moment.duration(0));
     }
-  },
-  methods: {
-    gatherStepsDurations(arr, s) {
-      if (s.duration) {
-        return arr.concat(s.duration);
-      }
-
-      return arr;
-    }
   }
 }
 </script>
@@ -139,15 +130,19 @@ ul {
   list-style-type: none;
 }
 
-.Recipe >>> .prep {
-  background-color: rgba(128,0,128,0.45);
+.totalTime {
+  margin-top: 0.5rem;
 }
 
-.Recipe >>> .perform {
-  background-color: rgba(0,128,0,0.45);
-}
-
-.Recipe >>> .cook {
-  background-color: rgba(255,128,0,0.45);
-}
+/* .Recipe >>> .prep { */
+/*   background-color: rgba(128,0,128,0.45); */
+/* } */
+/*  */
+/* .Recipe >>> .perform { */
+/*   background-color: rgba(0,128,0,0.45); */
+/* } */
+/*  */
+/* .Recipe >>> .cook { */
+/*   background-color: rgba(255,128,0,0.45); */
+/* } */
 </style>

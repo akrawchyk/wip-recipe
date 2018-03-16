@@ -1,5 +1,13 @@
 import moment from "moment";
 
+function gatherStepsDurations(arr, s) {
+  if (s.duration) {
+    return arr.concat(s.duration);
+  }
+
+  return arr;
+}
+
 function _getDurationValue(d, part = 'max') {
   // checks for 1-2 units of time and chooses min/max amount
   if (!["min", "max"].includes(part)) {
@@ -94,6 +102,7 @@ function humanize(s) {
 
 export default {
   methods: {
+    gatherStepsDurations,
     getMaxDuration,
     getMinDuration,
     momentDuration,
