@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.0bd33406795317ba96d1b509a7c0641c.js"
+  "/wip-recipe/precache-manifest.3775ae8328367e5af7101d390529f373.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "wip-recipe"});
