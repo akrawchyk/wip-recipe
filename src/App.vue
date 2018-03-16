@@ -19,6 +19,12 @@ html {
   box-sizing: inherit;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

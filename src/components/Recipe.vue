@@ -17,13 +17,13 @@
         Total Time: <meta itemprop="totalTime" :content="totalTime"> {{humanize(totalTime)}}
       </strong>
     </div>
-    <h2>Ingredients</h2>
+    <h3>Ingredients</h3>
     <ul>
       <li v-for="(ingredient, iidx) in recipe.ingredients" :key="iidx">
         <RecipeIngredient :ingredient="ingredient" />
       </li>
     </ul>
-    <h2>Steps</h2>
+    <h3>Steps</h3>
     <ol class="recipeInstructions" itemprop="recipeInstructions">
       <li v-for="(step, sidx) in recipe.steps" :key="sidx" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <RecipeStep :step="step" :steps="recipe.steps" :stepIdx="sidx" :totalTime="totalTime" />
@@ -114,11 +114,6 @@ export default {
 </script>
 
 <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
-
 ul,
 ol {
   display: flex;
@@ -133,16 +128,4 @@ ul {
 .totalTime {
   margin-top: 0.5rem;
 }
-
-/* .Recipe >>> .prep { */
-/*   background-color: rgba(128,0,128,0.45); */
-/* } */
-/*  */
-/* .Recipe >>> .perform { */
-/*   background-color: rgba(0,128,0,0.45); */
-/* } */
-/*  */
-/* .Recipe >>> .cook { */
-/*   background-color: rgba(255,128,0,0.45); */
-/* } */
 </style>

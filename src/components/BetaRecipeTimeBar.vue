@@ -25,4 +25,16 @@ export default {
 .BetaRecipeTimeBar > div {
   flex: 1;
 }
+
+.prep {
+  background-color: rgba(128,0,128,0.45);
+}
+
+.perform {
+  background-color: rgba(0,128,0,0.45);
+}
+
+.cook {
+  background-color: rgba(255,128,0,0.45);
+}
 </style>
